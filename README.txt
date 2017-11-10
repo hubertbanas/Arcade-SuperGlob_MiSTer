@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------
+-- 
+-- Arcade: Super Glob port to MiSTer by Sorgelig
+-- 10 November 2017
+-- 
+---------------------------------------------------------------------------------
+-- A simulation model of Pacman hardware
+-- Copyright (c) MikeJ - Feb 2007
+---------------------------------------------------------------------------------
+-- 
+-- Support screen and controls rotation on HDMI output.
+-- Only controls are rotated on VGA output.
+-- 
+-- 
+-- Keyboard inputs :
+--
+--   F2/SPACE  : Jump / Coin + Start 2 players
+--   F1/CTRL   : Call / Coin + Start 1 player
+--   UP,DOWN,LEFT,RIGHT arrows : Movements
+--
+-- Joystick support.
+-- 
+---------------------------------------------------------------------------------
