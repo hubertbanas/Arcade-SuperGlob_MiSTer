@@ -14,8 +14,9 @@
 -- 
 -- Keyboard inputs :
 --
---   F2/SPACE  : Jump / Coin + Start 2 players
---   F1/CTRL   : Call / Coin + Start 1 player
+--   F3        : Coin
+--   F2/SPACE  : Jump / Start 2 players
+--   F1/CTRL   : Call / Start 1 player
 --   UP,DOWN,LEFT,RIGHT arrows : Movements
 --
 -- Joystick support.

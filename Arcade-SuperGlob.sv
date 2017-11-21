@@ -128,8 +128,8 @@ localparam CONF_STR = {
 	"O2,Orientation,Vert,Horz;",
 	"-;",
 	"T6,Reset;",
-	"J,Call/Start 1P,Jump/Start 2P;",
-	"V,v1.00.",`BUILD_DATE
+	"J,Call/Start 1P,Jump/Start 2P,Coin;",
+	"V,v1.01.",`BUILD_DATE
 };
 
 ////////////////////   CLOCKS   ///////////////////
@@ -196,6 +196,7 @@ always @(posedge clk_sys) begin
 
 			'h005: btn_one_player  <= pressed; // F1
 			'h006: btn_two_players <= pressed; // F2
+			'h004: btn_coin        <= pressed; // F3
 		endcase
 	end
 end
@@ -206,6 +207,7 @@ reg btn_right = 0;
 reg btn_left  = 0;
 reg btn_one_player  = 0;
 reg btn_two_players = 0;
+reg btn_coin  = 0;
 
 wire m_up     = status[2] ? btn_left  | joy[1] : btn_up    | joy[3];
 wire m_down   = status[2] ? btn_right | joy[0] : btn_down  | joy[2];
@@ -214,7 +216,7 @@ wire m_right  = status[2] ? btn_up    | joy[3] : btn_right | joy[0];
 
 wire m_start1 = btn_one_player  | joy[4];
 wire m_start2 = btn_two_players | joy[5];
-wire m_coin   = m_start1 | m_start2;
+wire m_coin   = btn_coin | joy[6];
 
 wire hblank, vblank;
 wire ce_vid = ce_6m;
